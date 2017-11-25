@@ -1,0 +1,26 @@
+{
+  "name": "auth_password",
+  "version": "1.0",
+  "description": {
+    "en": "Password Authentication Driver",
+    "ru": "Password Authentication Driver",
+    "uk": "Password Authentication Driver"
+  },
+  "url": "https://github.com/pytsite/plugin-auth_password",
+  "author": {
+    "name": "Alexander Shepetko",
+    "email": "a@shepetko.com",
+    "url": "https://shepetko.com"
+  },
+  "requires": {
+    "packages": [],
+    "plugins": [
+      "auth",
+      "assetman",
+      "font_awesome",
+      "form",
+      "twitter_bootstrap",
+      "widget"
+    ]
+  }
+}
