@@ -24,7 +24,7 @@ class _SignInForm(_form.Form):
         self.add_widget(_widget.input.Email(
             uid='login',
             weight=10,
-            label=_lang.t('password@login'),
+            label=_lang.t('auth_password@login'),
             prepend='<i class="fa fa-user"></i>',
             h_size='col col-sm-6',
             h_size_row_css='justify-content-center',
@@ -36,7 +36,7 @@ class _SignInForm(_form.Form):
         self.add_widget(_widget.input.Password(
             uid='password',
             weight=20,
-            label=_lang.t('password@password'),
+            label=_lang.t('auth_password@password'),
             prepend='<i class="fa fa-lock"></i>',
             h_size='col col-sm-6',
             h_size_row_css='justify-content-center',
@@ -45,7 +45,7 @@ class _SignInForm(_form.Form):
         ))
 
         submit_btn = self.get_widget('action-submit')
-        submit_btn.value = _lang.t('password@sign_in')
+        submit_btn.value = _lang.t('auth_password@sign_in')
         submit_btn.icon = 'fa fa-sign-in'
 
 
