@@ -1,3 +1,1 @@
-login: 'Login'
-password: 'Password'
-sign_in: 'Sign In'
+authentication_error: 'Authentication error'

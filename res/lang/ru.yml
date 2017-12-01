@@ -1,3 +1,1 @@
-login: 'Логин'
-password: 'Пароль'
-sign_in: 'Войти'
+authentication_error: 'Ошибка аутентификации'

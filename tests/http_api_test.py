@@ -1,6 +1,7 @@
 """
 """
-from pytsite import testing, http_api
+from pytsite import testing
+from plugins import http_api
 
 __author__ = 'Alexander Shepetko'
 __email__ = 'a@shepetko.com'
