@@ -4,10 +4,15 @@
 ## Changelog
 
 
+### 1.2 (2017-12-13)
+
+Support for PytSite-7.0.
+
+
+
 ### 1.1 (2017-12-01)
 
 Part of the logic moved to the new plugin `auth_ui_password`.
-
 
 
 ### 1.0.1 (2017-11-28)
