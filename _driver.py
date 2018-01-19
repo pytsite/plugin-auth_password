@@ -22,9 +22,21 @@ class Password(_auth.driver.Authentication):
         """
         return 'Password'
 
-    def sign_up(self, data: dict):
-        # TODO
-        pass
+    def sign_up(self, data: dict) -> _auth.model.AbstractUser:
+        """Sign up a new user
+        """
+        # Create user
+        _auth.switch_user_to_system()
+        user = _auth.create_user(data.get('login'), data.get('password'))
+        _auth.restore_user()
+
+        # Fill additional fields
+        for k, v in data.items():
+            if k not in ('email', 'first_name', 'last_name', 'nickname') or not v:
+                continue
+            user.set_field(k, v)
+
+        return user.save()
 
     def sign_in(self, data: dict) -> _auth.model.AbstractUser:
         """Authenticate user

@@ -4,6 +4,11 @@
 ## Changelog
 
 
+### 1.3 (2018-01-19)
+
+Sign up implemented.
+
+
 ### 1.2.1 (2018-01-08)
 
 Tests and documentation.
