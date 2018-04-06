@@ -36,7 +36,11 @@ class Password(_auth.driver.Authentication):
                 continue
             user.set_field(k, v)
 
-        return user.save()
+        _auth.switch_user_to_system()
+        user.save()
+        _auth.restore_user()
+
+        return user
 
     def sign_in(self, data: dict) -> _auth.model.AbstractUser:
         """Authenticate user
@@ -51,12 +55,12 @@ class Password(_auth.driver.Authentication):
         user = _auth.get_user(login)
         if not user:
             _logger.warn("User with login '{}' is not found".format(login))
-            raise _auth.error.AuthenticationError(_lang.t('auth@authentication_error'))
+            raise _auth.error.AuthenticationError()
 
         # Check password
         if not _auth.verify_password(password, user.password):
             _logger.warn("Incorrect password provided for user with login '{}'".format(login))
-            raise _auth.error.AuthenticationError(_lang.t('auth@authentication_error'))
+            raise _auth.error.AuthenticationError()
 
         return user
 

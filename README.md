@@ -4,6 +4,11 @@
 ## Changelog
 
 
+### 1.3.1 (2018-04-06)
+
+Permissions checking fixed.
+
+
 ### 1.3 (2018-01-19)
 
 Sign up implemented.
