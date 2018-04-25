@@ -26,19 +26,20 @@ class Password(_auth.driver.Authentication):
         """Sign up a new user
         """
         # Create user
-        _auth.switch_user_to_system()
-        user = _auth.create_user(data.get('login'), data.get('password'))
-        _auth.restore_user()
+        try:
+            _auth.switch_user_to_system()
+            user = _auth.create_user(data.get('login'), data.get('password'))
 
-        # Fill additional fields
-        for k, v in data.items():
-            if k not in ('email', 'first_name', 'last_name', 'nickname') or not v:
-                continue
-            user.set_field(k, v)
+            # Fill additional fields
+            for k, v in data.items():
+                if k not in ('email', 'first_name', 'last_name', 'nickname') or not v:
+                    continue
+                user.set_field(k, v)
 
-        _auth.switch_user_to_system()
-        user.save()
-        _auth.restore_user()
+            user.save()
+
+        finally:
+            _auth.restore_user()
 
         return user
 

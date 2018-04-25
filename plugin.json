@@ -1,6 +1,6 @@
 {
   "name": "auth_password",
-  "version": "1.3.1",
+  "version": "1.3.2",
   "description": {
     "en": "Password Authentication Driver",
     "ru": "Password Authentication Driver",
@@ -14,7 +14,7 @@
   },
   "requires": {
     "plugins": [
-      "auth"
+      "auth>=3.0"
     ]
   }
 }
