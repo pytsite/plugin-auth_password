@@ -4,6 +4,12 @@
 ## Changelog
 
 
+### 1.4 (2018-08-23)
+
+- Automatic human readable user's nickname setting added.
+- Unused package usage removed.
+
+
 ### 1.3.2 (2018-04-25)
 
 Permissions issue fixed.

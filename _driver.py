@@ -1,11 +1,11 @@
 """PytSite Password Authentication Driver
 """
-from pytsite import lang as _lang, logger as _logger
-from plugins import auth as _auth
-
-__author__ = 'Alexander Shepetko'
+__author__ = 'Oleksandr Shepetko'
 __email__ = 'a@shepetko.com'
 __license__ = 'MIT'
+
+from pytsite import logger as _logger
+from plugins import auth as _auth
 
 
 class Password(_auth.driver.Authentication):
@@ -35,6 +35,10 @@ class Password(_auth.driver.Authentication):
                 if k not in ('email', 'first_name', 'last_name', 'nickname') or not v:
                     continue
                 user.set_field(k, v)
+
+            # Set nickname
+            if not 'nickname' not in data:
+                user.nickname = user.first_last_name
 
             user.save()
 
