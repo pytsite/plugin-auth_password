@@ -4,6 +4,11 @@
 ## Changelog
 
 
+### 1.4.1 (2018-08-23)
+
+Typo fixed.
+
+
 ### 1.4 (2018-08-23)
 
 - Automatic human readable user's nickname setting added.

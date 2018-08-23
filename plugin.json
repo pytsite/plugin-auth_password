@@ -1,6 +1,6 @@
 {
   "name": "auth_password",
-  "version": "1.4",
+  "version": "1.4.1",
   "description": {
     "en": "Password Authentication Driver",
     "ru": "Password Authentication Driver",

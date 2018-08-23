@@ -37,7 +37,7 @@ class Password(_auth.driver.Authentication):
                 user.set_field(k, v)
 
             # Set nickname
-            if not 'nickname' not in data:
+            if 'nickname' not in data:
                 user.nickname = user.first_last_name
 
             user.save()
