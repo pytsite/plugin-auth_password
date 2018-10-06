@@ -4,6 +4,11 @@
 ## Changelog
 
 
+### 1.5 (2018-10-06)
+
+Support of `pytsite-8.x`.
+
+
 ### 1.4.1 (2018-08-23)
 
 Typo fixed.

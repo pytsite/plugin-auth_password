@@ -1,6 +1,6 @@
 {
   "name": "auth_password",
-  "version": "1.4.1",
+  "version": "1.5",
   "description": {
     "en": "Password Authentication Driver",
     "ru": "Password Authentication Driver",
@@ -13,8 +13,9 @@
     "url": "https://shepetko.com"
   },
   "requires": {
-    "plugins": [
-      "auth>=3.0"
-    ]
+    "pytsite": "8.x",
+    "plugins": {
+      "auth": "3.x"
+    }
   }
 }
